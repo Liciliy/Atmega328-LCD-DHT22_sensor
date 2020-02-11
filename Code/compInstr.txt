@@ -1,0 +1,8 @@
+
+Linux:
+avr-gcc -mmcu=atmega328p -DF_CPU=8000000UL -Os LCD_4bit.c lcd_dht22_leds.c timer0Manager.c DHT22Manager.c -o lcd_dht22_leds.o; avr-objcopy -j .text -j .data -O ihex  lcd_dht22_leds.o  lcd_dht22_leds.hex;
+
+sudo avrdude -c usbasp-clone -p atmega328p -U flash:w:lcd_dht22_leds.hex -v -v -v -v -P /dev/ttyACM0
+
+Windows:
+D:\SmartHouseProj\avr8-gnu-toolchain-win32_x86\bin\avr-gcc -mmcu=atmega328p -DF_CPU=8000000UL -Os LCD_4bit.c lcd_dht22_leds.c timer0Manager.c DHT22Manager.c -o lcd_dht22_leds.o; avr-objcopy -j .text -j .data -O ihex  lcd_dht22_leds.o  lcd_dht22_leds.hex;
