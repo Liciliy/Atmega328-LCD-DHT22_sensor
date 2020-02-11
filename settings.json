@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "lcd_4bit.h": "c",
+        "io.h": "c",
+        "delay.h": "c",
+        "generalmacroses.h": "c",
+        "dht22manager.h": "c"
+    }
+}
